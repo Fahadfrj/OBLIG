@@ -5,14 +5,12 @@ import static javax.swing.JOptionPane.*;
 class Tallspill {
      public static int Tall;
     public static int nyttTall() {
-        // Trekker og returner et slumptall mellom 0 og 200.
-        // Tips bruk : (int) (Math.random() * 201), som gir verdier mellom 0 og 200
+
 
         return (int) (Math.random() * 201);
     }
 
     public static void visMelding(String melding){
-        // Viser parameterens innhold i en meldingsboks.
     }
 
     private static void forLite(int tall){
