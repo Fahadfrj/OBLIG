@@ -12,19 +12,19 @@ public class oppgave1 {
         while(o<n){
             try{
                 o = Integer.parseInt(showInputDialog("Enter the first number"));
+                n = Integer.parseInt(showInputDialog("Enter the second number"));
+
 
             } catch (Exception e){
                 o =0;
-            }
-            try{
-                n = Integer.parseInt(showInputDialog("Enter the second number"));
-
-            } catch (Exception e){
                 n =0;
+
             }
-            if(o<n){
+
+            if(o<=n){
 
               showMessageDialog(null, "The first number should be higher than the second one");
+              continue;
             }
 
 
