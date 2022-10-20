@@ -4,33 +4,37 @@ public class oppgave1 {
 
     public static void main(String [] args){
 
-        int o= -1,n=0,sum=0;
+        int nederst= 0,overst=-1,sum=0;
 
 
 
 
-        while(o<n){
+        while(overst<nederst){
             try{
-                o = Integer.parseInt(showInputDialog("Enter the first number"));
-                n = Integer.parseInt(showInputDialog("Enter the second number"));
+                nederst = Integer.parseInt(showInputDialog("Skriv inn nedre grense"));
+                overst = Integer.parseInt(showInputDialog("Skriv inn øvre grense"));
 
 
             } catch (Exception e){
-                o =0;
-                n =0;
+                nederst =0;
+                overst =0;
 
             }
+            if(overst<=nederst && overst != 0){
 
-            if(o<=n){
+              showMessageDialog(null, "Nedre grense må være mindre enn den øvre");
+            }
+            else if(overst==nederst){
 
-              showMessageDialog(null, "The first number should be higher than the second one");
-              continue;
+                showMessageDialog(null, "Du må skriv in gyldig tall");
+                nederst= 0;
+                overst=-1;
             }
 
 
         }
-        for(int i=n ; i<=o; i++){
-            if(i==o){
+        for(int i=nederst ; i<=overst; i++){
+            if(i==overst){
                 sum+=i;
                 System.out.print(" "+i + " = " + sum);
                 continue;

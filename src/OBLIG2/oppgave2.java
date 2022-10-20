@@ -52,7 +52,7 @@ class Tallspill {
            else if(s<Tall){
                forLite(s);
            }
-           else (s==Tall){
+           else {
                avsluttRunde(t , s);
                break;
            }
