@@ -16,16 +16,16 @@ class Tallspill {
     }
 
     private static void forLite(int tall){
-        visMelding("The number" + tall +" is smaller than the game number" + "\n" + "try a greater nnumber");
+        visMelding( tall +" er for lite" + "\n" + "prøv igjen!");
    }
 
     private static void forStort(int tall) {
-        visMelding("The number " + tall +" is greater than the game number" + "\n" + "try a smaller nnumber");
+        visMelding( tall +" er for stort" + "\n" + "prøv igjen!");
 
     }
 
     public static void avsluttRunde(int antall, int gjetning) {
-        visMelding("the number you guesse " + gjetning + " is correct" + "\n" + "you needed "+ antall+ " tries");
+        visMelding( gjetning + " er riktig " + "\n" + "du gjettet riktig på "+ antall+ " forsøk");
     }
 
     public static void kjørSpill() {
@@ -35,14 +35,14 @@ class Tallspill {
         int s , t =0;
        while(true){
            try{
-               s = Integer.parseInt(showInputDialog("Guess the number"));
+               s = Integer.parseInt(showInputDialog("jeg tenker på et tall mellom 0 og 200" + "\n" + " prøv å gjett tallet:"));
 
            }catch (Exception e){
                s=-1;
            }
            if(s == -1){
 
-               visMelding("The number you entered is unrecognized");
+               visMelding("Talle er ugyldig");
                continue;
            }
 
@@ -69,9 +69,8 @@ public class oppgave2 {
 
 
     while(true){
-           //showMessageDialog(null , "To start the game write 1" + "\n" + "To restart the game write 2" + "\n"+ "To quit the game write 3"  );
 
-        s = Integer.parseInt(showInputDialog("To start the game write 1" + "\n" + "\n"+ "To quit the game write 2"  ));
+        s = Integer.parseInt(showInputDialog("for å kjør spillet skriv 1" + "\n"+ "for å avslutte spillet skriv 2"  ));
 
         switch (s){
             case 1 : {
